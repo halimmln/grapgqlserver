@@ -1,0 +1,22 @@
+
+ typeDefs = `
+    type Query{
+        users: [user]
+    }
+    type user{
+        id: ID,
+        fname:String,
+        lname:String,
+        email:String,
+        phone:Int
+    }
+   type Mutation {
+        addUser(fname: String,lname:String,email: String,phone:Int):user
+      }
+    type Mutation {
+        updateUser(id:ID,fname: String,lname:String,email: String,phone:Int):user
+    }
+    type Mutation {
+        deleteUser(id:ID ):user
+    }
+`;
